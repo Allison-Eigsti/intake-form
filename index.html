@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Template</title>
+    <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="#" class="primary-heading">Intake Form</a></h1>
+    </header>
+
+<main>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <div class="form-container">
+        <fieldset class="personal-info">
+            <legend>Personal Information</legend>
+            <div class="form-item">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8" maxlength="16">
+            </div>
+            <div class="form-item">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com"required>
+            </div>
+            <div class="form-item">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" minlength="10" maxlength="10">
+            </div>
+            <div class="form-item">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-item">
+                <label for="dob">Birthday</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-item">
+                <p>Are you a student?</p>
+                <label for="yes">Yes</label>
+                    <input type="radio" name="student" id="yes" value="Yes">
+                <label for="no">No</label>
+                    <input type="radio" name="student" id="no" value="No">
+            </div>
+            <div class="form-item">
+                <label for="language">What is your first language?</label>
+                <select id="language" name="language">
+                    <option value="English" label="English"></option>
+                    <option value="Spanish" label="Spanish"></option>
+                    <option value="French" label="French"></option>
+                    <option value="Arabic" label="Arabic"></option>
+                    <option value="Mandarin" label="Mandarin"></option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="resume">Please upload your resume here:</label>
+                <input type="file" id="resume" name="resume">
+            </div>
+        </fieldset>
+
+        <fieldset class="preferences">
+            <legend>Preferences</legend>
+            <div class="form-item">
+                <p class="padding-bottom">What is your favorite color?</p>
+                <label for="blue">Blue</label>
+                <input type="checkbox" id="blue" name="blue" value="blue">
+                <label for="red">Red</label>
+                <input type="checkbox" id="red" name="red" value="red">
+                <label for="green">Green</label>
+                <input type="checkbox" id="green" name="green" value="green">
+                <label for="yellow">Yellow</label>
+                <input type="checkbox" id="yellow" name="yellow" value="yellow">
+            </div>
+            <div class="form-item">
+                <label for="bio">Tell us about yourself and what you like to do!</label>
+                <textarea style="display: block;" name="bio" id="bio" placeholder="Content here..." rows="12" cols="36"></textarea>
+            </div>
+        </fieldset>
+    </div>
+    <div class="button-container">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+</main>
+</body>
+</html>

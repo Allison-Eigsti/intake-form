@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1><a href="#" class="primary-heading">User Submissions</a></h1>
+    </header>
+<main>
+    <div class="results" id="results"></div>
+    <button><a href="index.html">Back to Form</a></button>
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append(`${name}, ${value}`)
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+</main>
+</body>
+</html>
